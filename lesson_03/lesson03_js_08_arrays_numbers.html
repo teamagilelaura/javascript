@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script>
+    var numbers = [
+      23,
+      12,
+      3,
+      5,
+      45,
+      10,
+    ];
+
+    var total = 0;
+    var highest = 0;
+
+    for (var i = 0; i < numbers.length; i++) {
+      document.write(numbers[i] + "<br>");
+      // CALCULATE TOTAL
+      total = total + numbers[i];
+
+      // CALCULATE HIGHEST
+      if (numbers[i] > highest) {
+        highest = numbers[i];
+      }
+    }
+
+    var avg = total / numbers.length;
+
+    document.write("TOTAL: " + total + "<br>");
+    document.write("AVERAGE: " + avg + "<br>");
+    document.write("HIGHEST: " + highest + "<br>")
+
+    // HOMEWORK: calculate the lowest number as well
+  </script>
+
+</body>
+
+</html>
