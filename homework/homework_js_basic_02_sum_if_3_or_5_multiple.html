@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script>
+    /* Modify the previous program such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
+     */
+
+    //var number = parseInt(prompt("Tell me a number please"));
+    var number = parseInt(prompt("Tell me a number please"));
+    var sum = 0;
+
+    for (var i = 1; i <= number; i++) {
+      if (i % 3 == 0 || i % 5 == 0) {
+        document.write(i + "<br>");
+        sum = sum + i;
+      }
+    }
+
+    document.write("The sum from 1 until " + number + " is " + sum + ", because we only consider multiples of three or five.");
+  </script>
+
+
+</body>
+
+</html>
