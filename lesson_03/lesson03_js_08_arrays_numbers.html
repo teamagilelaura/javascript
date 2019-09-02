@@ -19,16 +19,22 @@
     ];
 
     var total = 0;
-    var highest = 0;
+    var highest = -Infinity;
+    var lowest = Infinity;
 
     for (var i = 0; i < numbers.length; i++) {
       document.write(numbers[i] + "<br>");
       // CALCULATE TOTAL
-      total = total + numbers[i];
+      total += numbers[i];
 
       // CALCULATE HIGHEST
       if (numbers[i] > highest) {
         highest = numbers[i];
+      }
+
+      // CALCULATE LOWEST
+      if (numbers[i] < lowest) {
+        lowest = numbers[i];
       }
     }
 
@@ -36,7 +42,8 @@
 
     document.write("TOTAL: " + total + "<br>");
     document.write("AVERAGE: " + avg + "<br>");
-    document.write("HIGHEST: " + highest + "<br>")
+    document.write("HIGHEST: " + highest + "<br>");
+    document.write("LOWEST: " + lowest + "<br>");
 
     // HOMEWORK: calculate the lowest number as well
   </script>
