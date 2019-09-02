@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script>
+    /*Write a program that prints the next 20 leap years.
+     */
+    var i = 2019;
+    var isLeap = true;
+    var counter = 0;
+
+    for (var i = 2019; counter <= 19; i++) {
+      if (i % 4 == 0) {
+        isLeap = true
+      }
+
+      if (i % 100 == 0) {
+        isLeap = false
+      }
+
+      if (i % 400 == 0) {
+        isLeap = true
+      }
+
+      if (isLeap) {
+        document.write(i + "<br>");
+        counter++;
+      }
+      i = i + 1;
+    }
+  </script>
+
+
+</body>
+
+</html>
