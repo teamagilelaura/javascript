@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+
+      var number = 83498534598356498734; // Ask the user for his number later
+
+      var isPrime = true;
+
+      for(var i = 2; i <= Math.sqrt(number); i ++) {
+        if (number % i == 0) {
+          isPrime = false;
+          break;
+        }
+      }
+
+      if (isPrime) {
+        document.write("DUDE THAT'S A PRIME DUDE!<br>");
+      } else {
+        document.write("NOT A PRIME!<br>");
+      }
+
+    </script>
+  </body>
+</html>

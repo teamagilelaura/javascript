@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+
+      var number = 7; // Ask the user for his number later
+
+      var counter = 0;
+
+      for(var i = 2; i < number; i ++) {
+
+        // var result = number % i == 0;
+        //
+        // document.write(i + "<br>");
+        // document.write(result + "<br>");
+        // document.write("-------<br>");
+
+        if (number % i == 0) {
+          counter++;
+        }
+      }
+
+      if (counter == 0) {
+        document.write("DUDE THAT'S A PRIME DUDE!<br>");
+      } else {
+        document.write("NOT A PRIME!<br>");
+      }
+      
+    </script>
+  </body>
+</html>

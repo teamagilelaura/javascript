@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script>
+    function randomNumber(min, max) {
+      if (min > max) {
+        return NaN;
+      }
+      return Math.floor(Math.random() * (max + 1 - min)) + min;
+    }
+
+    var someNumbers = [];
+    for (var i = 0; i < 5; i++) {
+      //  someNumbers[i] = randomNumber(1, 100);
+      someNumbers.push(randomNumber(1, 100));
+    }
+    document.write(someNumbers + "<br>")
+  </script>
+
+</body>
+
+</html>

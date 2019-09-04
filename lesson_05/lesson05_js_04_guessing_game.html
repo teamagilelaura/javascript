@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script>
+    function randomNumber(min, max) {
+      if (min > max) {
+        return NaN;
+      }
+      return Math.floor(Math.random() * (max + 1 - min)) + min;
+    }
+
+    var gameNumber;
+
+    var counter = 1;
+
+    gameNumber = randomNumber(1, 100);
+    document.write(gameNumber + "<br>");
+
+    var playerNumber = parseInt(prompt("Tell me a number please" + gameNumber));
+
+    while (playerNumber != gameNumber && counter <= 5) {
+      counter++
+      if (gameNumber == playerNumber) {
+        alert("That's right.")
+      }
+      if (playerNumber < gameNumber) {
+        alert("Too low")
+      }
+      if (playerNumber > gameNumber) {
+        alert("Too high")
+      }
+      playerNumber = parseInt(prompt("Tell me a number again please" + gameNumber));
+    }
+    if (counter <= 5) {
+      document.write("Sorry, the game is over")
+    }
+  </script>
+
+</body>
+
+</html>

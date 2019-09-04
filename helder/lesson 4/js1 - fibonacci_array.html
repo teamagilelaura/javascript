@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+
+        var fibo = [0, 1];
+
+        // EXERCISE FILL THE ARRAY WITH 18 MORE FIBO NUMBERS
+        // FOR A TOTAL OF THE 1st 20 NUMBERS OF THE FIBO SEQUENCE
+
+        for (var i = 2; i < 20; i++) {
+            fibo[i] = fibo[i - 1] + fibo[i - 2];
+        }
+
+        // Easy array output just for debug purposes
+        document.write(fibo + "<br>");
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+
+      var someNumbers = [23, 12, 3, 5, 12, 45, 10];
+
+      var total = 0;
+      // var highest = -Infinity;
+      // var lowest = Infinity;
+      var highest = someNumbers[0];
+      var lowest = someNumbers[0];
+
+      for(var i = 0; i < someNumbers.length; i++) {
+        // CALCULATE TOTAL
+        //total = total + someNumbers[i];
+        total += someNumbers[i];
+
+        // CALCULATE HIGHEST
+        if (someNumbers[i] > highest) {
+          highest = someNumbers[i];
+        }
+
+        // CALCULATE LOWEST
+        if (someNumbers[i] < lowest) {
+          lowest = someNumbers[i];
+        }
+      }
+
+      var avg = total / someNumbers.length;
+
+      document.write("TOTAL: " + total + "<br>");
+      document.write("AVERAGE: " + avg + "<br>");
+      document.write("HIGHEST: " + highest + "<br>");
+      document.write("LOWEST: " + lowest + "<br>");
+
+    </script>
+  </body>
+</html>

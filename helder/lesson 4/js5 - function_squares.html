@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+    
+        function rectPerimeter(sideA, sideB) {
+            // return sideA + sideA + sideB + sideB;
+            return 2 * (sideA + sideB);
+        }
+
+        function rectArea(sideA, sideB) {
+            return sideA * sideB;
+        }
+
+        function squarePerimeter(side) {
+            // return side * 4;
+            return rectPerimeter(side, side);
+        }
+
+        function squareArea(side) {
+            // return side * side;
+            return rectArea(side, side);
+        }
+
+
+        // HOMEWORK
+
+        // create a function that receives a number as a parameter
+        // and returns a boolean (true/false) if the number is prime or not
+
+        function isPrime(number) {
+
+            return false;
+        }
+
+
+    </script>
+  </body>
+</html>

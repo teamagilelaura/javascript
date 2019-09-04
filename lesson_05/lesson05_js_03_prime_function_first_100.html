@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script>
+    function isPrime(number) {
+
+      for (var i = 2; i < number; i++) {
+        if (number % i == 0) {
+          return false;
+        }
+        return true;
+      }
+    }
+
+    var counter = 0;
+    var number = 1;
+
+    while (counter < 100) {
+
+      if (isPrime(number)) {
+        counter++;
+        document.write(counter + ": " + number + "<br>");
+
+      }
+      number++
+    }
+  </script>
+
+</body>
+
+</html>
