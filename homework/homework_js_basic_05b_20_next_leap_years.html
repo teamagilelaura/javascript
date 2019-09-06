@@ -14,8 +14,10 @@
     var i = 2019;
     var isLeap = true;
     var counter = 0;
+    var number;
 
-    for (var i = 2019; counter <= 19; i++) {
+    for (var i = 2019; i <= number; i++) {
+      isLeap = false;
       if (i % 4 == 0) {
         isLeap = true
       }
@@ -32,8 +34,12 @@
         document.write(i + "<br>");
         counter++;
       }
-      i = i + 1;
+      //  i = i + 1;
+      counter++;
     }
+
+    document.write(i + "<br>");
+    document.write(counter);
   </script>
 
 

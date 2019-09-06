@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Leap years.</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    /*
+     Write a program that prints the next 20 leap years.
+
+     https://kalender-365.de/leap-years.php
+    */
+
+    var year = 2100;
+    var counter = 0;
+
+    document.write("The next 20 leap years: <br><br>");
+
+    for (var i = 2019; i <= year; i++) {
+      if (i % 4 == 0) {
+
+        if (i % 100 == 0) {
+          
+          if (i % 400 == 0) {
+            document.write("<u>" + i + "</u>" + ", ");
+            counter++;
+          }
+        } else {
+            document.write(i + ", ");
+            counter++;
+        }
+        
+      }
+    }
+    document.write(" ...");
+    document.write(counter);
+  </script>
+  <hr>
+</body>
+
+</html>

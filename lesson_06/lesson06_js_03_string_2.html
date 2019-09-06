@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    var word = "banana";
+    var word2 = "";
+
+    for (var i = 0; i < word.length; i++) {
+      word2 += word[i];
+      if (i < word.length - 1) {
+        word2 += "-";
+      }
+    }
+
+    document.write(word2);
+  </script>
+</body>
+
+</html>

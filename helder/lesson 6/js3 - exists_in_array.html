@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+        // HOMEWORK
+
+        // create a function that takes 2 parameter
+        // 1 number 'needle' and 1 array 'haystack'
+        // the function retuns true/false if the number exists in the array
+
+        function existsInArray(needle, haystack) {
+
+          for (var i = 0; i < haystack.length; i++) {
+              if (needle == haystack[i]) {
+                    return true;
+              }
+          }
+
+          return false;
+        }
+
+        var testArray = [3, 5, 11, 12, 20, 50, 100, 123, 200, 400];
+        var testNumber1 = 11;
+        var testNumber2 = 14;
+
+        var t1 = existsInArray(testNumber1, testArray); // this should return false
+        var t2 = existsInArray(testNumber2, testArray); // this should return true
+
+        document.write(t1 + "<br>");
+        document.write(t2 + "<br>");
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

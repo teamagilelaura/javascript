@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+        function sumNumbersUpTo(number) {
+            var sum = 0;
+            for (var i = 1; i <= number; i++) {
+                sum += i; // sum = sum + i;
+            }
+            return sum;
+        }
+
+        function exercise2(number) {
+            var sum = 0;
+            for (var i = 1; i <= number; i++) {
+                if (i % 3 == 0 || i % 5 == 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        function factorial(number) {
+            var fact = 1;
+            for (var i = 1; i <= number; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+
+        function docWriteTimesTable(number) {
+            for (var i = 1; i <= 10; i++) {
+                var res = number * i;
+                document.write(number + " X " + i + " = " + res + "<br>");
+            }
+        }
+
+        var number = prompt("Dear user, what's the number?");
+        var choice = prompt("Would you like to calculate the factorial or the sum? (F/S)");
+
+        if (choice == "F" || choice == "f") {
+            var result = factorial(number);
+            document.write("Factorial: " + result);
+        } else if (choice == "S" || choice == "s") {
+            var result = sumNumbersUpTo(number);
+            document.write("Total: " + result);
+        } else {
+            document.write("Invalid Input");
+        }
+
+        document.write("<hr>");
+
+        for (var i = 1; i <= 12; i++) {
+            docWriteTimesTable(i);
+            document.write("<hr>");
+        }
+
+    </script>
+  </body>
+</html>

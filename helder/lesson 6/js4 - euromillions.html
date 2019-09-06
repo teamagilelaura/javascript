@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+        function randomNumber(min, max) {
+            if (min > max) {
+                return NaN;
+            }
+            return Math.floor(Math.random() * (max + 1 - min)) + min;
+        }
+
+        function existsInArray(needle, haystack) {
+            for (var i = 0; i < haystack.length; i++) {
+                if (needle == haystack[i]) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // create an array of 5 random numbers between 1..50 without repetition
+
+    </script>
+  </body>
+</html>
