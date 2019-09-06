@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+        
+        // var x = Math.random();
+
+        // x = x * 4;
+
+        // x = Math.floor(x);
+
+        // x = x + 3;
+
+        // document.write(x);
+
+
+        // function randomNumber(min, max) {
+        //     var x = Math.random();
+        //     x = x * (max + 1 - min);
+        //     x = Math.floor(x);
+        //     x = x + min;
+        //     return x;
+        // }
+
+
+        function randomNumber(min, max) {
+            if (min > max) {
+                return NaN;
+            }
+            return Math.floor(Math.random() * (max + 1 - min)) + min;
+        }
+
+        var counters = [0, 0, 0, 0, 0];
+
+        for (var i = 0; i < 100000; i++) {
+            var pos = randomNumber(0, 4);
+            counters[pos] ++;
+        }
+        document.write(counters);
+        
+
+
+
+    </script>
+  </body>
+</html>

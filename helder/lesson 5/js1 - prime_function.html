@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+        // HOMEWORK
+
+        // create a function that receives a number as a parameter
+        // and returns a boolean (true/false) if the number is prime or not
+
+        // function isPrime(number) {
+        //     var prime = true;
+
+        //     for(var i = 2; i < number; i ++) {
+        //         if (number % i == 0) {
+        //             prime = false;
+        //             break;
+        //         }
+        //     }
+        //     return prime;
+        // }
+
+        function isPrime(number) {
+
+            for(var i = 2; i < number; i ++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+         }
+    
+        var userNumber = prompt("What's the number?");
+
+        if (isPrime(userNumber)) {
+            document.write(userNumber + " is a prime!<br>");
+        } else {
+            document.write(userNumber + " is not a prime!<br>");
+        }
+
+        // Use the awesome 'isPrime' function to write on screen all
+        // the prime numbers between 1 and 100
+        
+        for (var i = 1; i <= 100; i++) {
+            if (isPrime(i)) {
+                document.write(i + " ");
+            }
+        }
+        document.write("<br>");
+
+        // Use the awesome 'isPrime' function to write on screen 
+        // the first 100 prime numbers
+
+        var counter = 0;
+        var number = 1;
+        while (counter < 100) {
+            if (isPrime(number)) {
+                counter++;
+                document.write(counter + ": " + number + "<br>");
+            }
+            number++;
+        }
+
+    </script>
+  </body>
+</html>

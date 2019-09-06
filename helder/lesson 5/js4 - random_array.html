@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+        function randomNumber(min, max) {
+            if (min > max) {
+                return NaN;
+            }
+            return Math.floor(Math.random() * (max + 1 - min)) + min;
+        }
+
+        var someNumbers = [];
+        for (var i = 0; i < 6; i++) {
+          someNumbers.push(randomNumber(1, 100));
+        }
+
+        document.write(someNumbers);
+
+
+        // HOMEWORK
+
+        // create a function that takes 2 parameter
+        // 1 number 'needle' and 1 array 'haystack'
+        // the function retuns true/false if the number exists in the array
+
+        function existsInArray(needle, haystack) {
+
+          // write your awesome code here...
+
+          return false;
+        }
+
+        var testArray = [3, 5, 10];
+        var testNumber1 = 7;
+        var testNumber2 = 10;
+
+        existsInArray(testNumber1, testArray); // this should return false
+        existsInArray(testNumber2, testArray); // this should return true
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

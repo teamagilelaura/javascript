@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+        function randomNumber(min, max) {
+            if (min > max) {
+                return NaN;
+            }
+            return Math.floor(Math.random() * (max + 1 - min)) + min;
+        }
+
+        // STEP 1:
+        // - create a random number [1..100] 'gameNumber'
+        // - ask the user for a number 'playerNumber'
+        // - let the player know if is number is too high or too low or he got it right
+
+
+
+
+        // var gameNumber = randomNumber(1, 100);
+
+        // var playerNumber = prompt("What's your guess? " + gameNumber);
+
+        // if (playerNumber == gameNumber) {
+        //     document.write("That's right!");
+        // }
+        // if (playerNumber > gameNumber) {
+        //     document.write("That's too high!");
+        // }
+        // if (playerNumber < gameNumber) {
+        //     document.write("That's too low!");
+        // }
+
+
+
+
+
+
+
+
+        // STEP 2:
+        // - ask as many times as needed, until the player gets the right number
+
+
+
+        // var gameNumber = randomNumber(1, 100);
+
+        // var playerNumber = prompt("What's your guess? " + gameNumber);
+
+        // while (gameNumber != playerNumber) {
+        //     var text = "";
+        //     if (playerNumber > gameNumber) {
+        //         text = "high";
+        //     } else {
+        //         text = "low";
+        //     }
+        //     playerNumber = prompt("Too " + text + " try again");
+        // }
+
+        // document.write("YAY!");
+
+        // STEP 3:
+        // - give the player a limited number of chances
+
+        var gameNumber = randomNumber(1, 100);
+       // alert(gameNumber); // CHEAT TO WIN!!!
+
+        var playerNumber;
+        var text = "";
+        var hasWon = false;
+
+        for (var i = 7; i > 0; i--) {
+            playerNumber = prompt(text + " What's your number? You have " + i + " tries left.");
+            
+            if (playerNumber == gameNumber) {
+                hasWon = true;
+                break;
+            }
+
+            if (playerNumber > gameNumber) {
+                text = "That's too High! Try again\n";
+            } else {
+                text = "That's too Low! Try again\n";
+            }
+        }
+
+        if (hasWon) {
+            document.write("That's right you're awesome!");
+        } else {
+            document.write("Dude you suck!");
+        }
+
+
+    </script>
+  </body>
+</html>
