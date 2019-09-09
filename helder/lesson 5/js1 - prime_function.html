@@ -1,70 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-    <script>
-        // HOMEWORK
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
 
-        // create a function that receives a number as a parameter
-        // and returns a boolean (true/false) if the number is prime or not
+<body>
 
-        // function isPrime(number) {
-        //     var prime = true;
+  <script>
+    // HOMEWORK
 
-        //     for(var i = 2; i < number; i ++) {
-        //         if (number % i == 0) {
-        //             prime = false;
-        //             break;
-        //         }
-        //     }
-        //     return prime;
-        // }
+    // create a function that receives a number as a parameter
+    // and returns a boolean (true/false) if the number is prime or not
 
-        function isPrime(number) {
+    // function isPrime(number) {
+    //     var prime = true;
 
-            for(var i = 2; i < number; i ++) {
-                if (number % i == 0) {
-                    return false;
-                }
-            }
-            return true;
-         }
-    
-        var userNumber = prompt("What's the number?");
+    //     for(var i = 2; i < number; i ++) {
+    //         if (number % i == 0) {
+    //             prime = false;
+    //             break;
+    //         }
+    //     }
+    //     return prime;
+    // }
 
-        if (isPrime(userNumber)) {
-            document.write(userNumber + " is a prime!<br>");
-        } else {
-            document.write(userNumber + " is not a prime!<br>");
+    function isPrime(number) {
+
+      for (var i = 2; i < number; i++) {
+        if (number % i == 0) {
+          return false;
         }
+      }
+      return true;
+    }
 
-        // Use the awesome 'isPrime' function to write on screen all
-        // the prime numbers between 1 and 100
-        
-        for (var i = 1; i <= 100; i++) {
-            if (isPrime(i)) {
-                document.write(i + " ");
-            }
-        }
-        document.write("<br>");
+    var userNumber = prompt("What's the number?");
 
-        // Use the awesome 'isPrime' function to write on screen 
-        // the first 100 prime numbers
+    if (isPrime(userNumber)) {
+      document.write(userNumber + " is a prime!<br>");
+    } else {
+      document.write(userNumber + " is not a prime!<br>");
+    }
 
-        var counter = 0;
-        var number = 1;
-        while (counter < 100) {
-            if (isPrime(number)) {
-                counter++;
-                document.write(counter + ": " + number + "<br>");
-            }
-            number++;
-        }
+    // Use the awesome 'isPrime' function to write on screen all
+    // the prime numbers between 1 and 100
 
-    </script>
-  </body>
+    for (var i = 1; i <= 100; i++) {
+      if (isPrime(i)) {
+        document.write(i + " ");
+      }
+    }
+    document.write("<br>");
+
+    // Use the awesome 'isPrime' function to write on screen
+    // the first 100 prime numbers
+
+    var counter = 0;
+    var number = 1;
+    while (counter < 100) {
+      if (isPrime(number)) {
+        counter++;
+        document.write(counter + ": " + number + "<br>");
+      }
+      number++;
+    }
+  </script>
+</body>
+
 </html>
