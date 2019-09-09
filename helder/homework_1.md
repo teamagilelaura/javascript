@@ -31,3 +31,17 @@ Write a program that prints a multiplication table for numbers up to 12.
 Write a program that prints the next 20 leap years.
 
 ---
+
+## Arrays
+
+6.
+
+Write a program that checks whether an number occurs in an array of numbers.
+
+7.
+
+Write a program that prints the names on odd positions in an array of names.
+
+8.
+
+Write a program that prints the name with more characters in an array of names.

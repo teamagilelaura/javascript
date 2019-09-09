@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+        function dashItUp(word) {
+
+            var newWord = "";
+            for (var i = 0; i < word.length; i++) {
+                if (i > 0) {
+                    newWord += "-";
+                }
+                newWord += word[i];
+            }
+
+            return newWord;
+        }
+
+
+        var userWord = prompt("whats the word?");
+        var dashed = dashItUp(userWord);
+        document.write(dashed);
+
+
+    </script>
+  </body>
+</html>

@@ -25,6 +25,47 @@
 
         // create an array of 5 random numbers between 1..50 without repetition
 
+        // var myLuckyNumbers = [];
+
+        // for (var i = 0; i < 5; i++) {
+        //     var number = randomNumber(1, 5);
+        //     while (existsInArray(number, myLuckyNumbers)) {
+        //         number = randomNumber(1, 5);
+        //     }
+        //     myLuckyNumbers[i] = number;
+        // }
+
+        // document.write(myLuckyNumbers);
+
+
+        function createArrayWithoutRepetition(min, max, size) {
+            var newArray = [];
+
+            while (newArray.length < size) {
+                var number = randomNumber(min, max);
+                if (!existsInArray(number, newArray)) { // ! means not
+                    newArray.push(number);
+                }
+            }
+
+            return newArray;
+        }
+
+        // for (var i = 0; i < 1000; i++) {
+        //     var myLuckyNumbers = createArrayWithoutRepetition(1, 49, 6);
+        //     document.write(myLuckyNumbers + "<br>");    
+        // }
+
+        var numbers = createArrayWithoutRepetition(1, 50, 5);
+        var stars = createArrayWithoutRepetition(1, 12, 2);
+
+        document.write(numbers + " - " + stars);
+        
+        
+        
+        
+        
+
     </script>
   </body>
 </html>
