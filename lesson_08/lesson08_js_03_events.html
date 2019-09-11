@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    #paragraph1 {
+      color: black
+    }
+
+    #button1 {
+      color: grey;
+      background-color: white;
+      border: solid 2px black;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="header1">Some text</h1>
+  <p id="paragraph1">some content</p>
+  <p>some more content</p>
+  <p2> Counter: </p2>
+  <p id="counter">0</p>
+  <button id="buttonPlus">+</button>
+  <button id="buttonMinus">-</button>
+
+  <script>
+    let counter = 0;
+
+    function userClickedPlus() {
+      counter++;
+      let p1 = document.getElementById("counter");
+      p1.innerHTML = counter;
+    }
+
+    let buttonPlus = document.getElementById("buttonPlus");
+    buttonPlus.addEventListener("click", userClickedPlus);
+
+    function userClickedMinus() {
+      counter--;
+      let p1 = document.getElementById("counter");
+      p1.innerHTML = counter;
+    }
+
+    let buttonMinus = document.getElementById("buttonMinus");
+    buttonMinus.addEventListener("click", userClickedMinus);
+  </script>
+</body>
+
+</html>
