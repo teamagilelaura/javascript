@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=“UTF-8”>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // O O P
+    // Object Oriented Programming Paradigm
+    class Rectangle {
+      constructor(sideA, sideB) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+      }
+      perimeter() {
+        return 2 * (this.sideA + this.sideB);
+      }
+      area() {
+        return this.sideA * this.sideB;
+      }
+
+      let rects = [
+        new Rectangle(10, 10),
+        new Rectangle(2, 4),
+        new Rectangle(12, 15)
+      ];
+      for (let i = 0; i < rects.length; i++) {
+        document.write(rects[i].perimeter());
+        document.write("<br>");
+      }
+  </script>
+</body>
+
+</html>

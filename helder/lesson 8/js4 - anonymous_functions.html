@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #counterText {
+            color: blueviolet;
+        }
+
+        button {
+            color: darkgray;
+            background-color: lightgray;
+            border: solid 2px darkgray;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="counterText">...</h1>
+
+    <button id="buttonUp"> + 1 </button>
+    <button id="buttonDown"> - 1 </button>
+
+    <script>
+
+        let counter = 0;
+        updateText();
+
+        function updateText() {
+            let counterText = document.getElementById("counterText");
+            counterText.innerHTML = counter;
+        }
+
+
+        let buttonUp = document.getElementById("buttonUp");
+        buttonUp.addEventListener("click", function() {    
+            counter++;
+
+            updateText();
+        });
+    
+        let buttonDown = document.getElementById("buttonDown");
+        buttonDown.addEventListener("click", function() {    
+            counter--;
+
+            updateText();
+        });
+
+        // create a counter app (1 button increases a number the other decreases)
+
+    </script>
+</body>
+</html>

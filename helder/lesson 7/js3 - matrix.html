@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+        // MATRIX
+
+        let someNumbers = [
+            [1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9, 10, 11, 12],
+            [13, 14, 15, 16]
+        ];
+
+        // let someValue = someNumbers[1][3];
+        // document.write(someValue);
+
+        var sumLines = [0, 0, 0, 0];
+        var sumCols = [0, 0, 0, 0];
+        
+        for (let i = 0; i < someNumbers.length; i++) {
+            for (let j = 0; j < someNumbers[i].length; j++) {
+                if (j > 0) {
+                    document.write(" + ");
+                }
+                document.write(someNumbers[i][j]);
+
+                sumLines[i] += someNumbers[i][j];
+                sumCols[j] += someNumbers[i][j];
+            }
+            document.write(" = " + sumLines[i] + "<br>");
+        }
+
+        document.write(" =  =  =  =<br>")
+
+        for (let i = 0; i < sumCols.length; i++) {
+            document.write(sumCols[i] + " ");
+        }
+    </script>
+  </body>
+</html>

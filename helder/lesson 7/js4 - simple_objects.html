@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+        // OBJECTS
+
+        let people = [
+            {
+                "name": "Joe",
+                "age": 20,
+                "city": "Hamburg"
+            },
+            {
+                "name": "Mary",
+                "age": undefined,
+                "city": "Hamburg"
+            },
+            {
+                "name": "Baby Bob",
+                "city": "Berlin"
+            },
+            {
+                "name": "Martha",
+                "age": 50,
+                "city": "Berlin"
+            }
+        ];
+
+        let oldestPerson = people[0];
+
+        document.write(oldestPerson.name + "<br>");
+        document.write(oldestPerson.age + "<br>");
+        document.write(oldestPerson.city + "<br>");
+        document.write("-----<br>");
+
+        for (let i = 0; i < people.length; i++) {
+            document.write(people[i].age);
+            document.write("<br>");
+
+            if (people[i].age > oldestPerson.age) {
+                oldestPerson = people[i];
+            }
+        }
+        document.write("-----<br>");
+        document.write(oldestPerson.name + "<br>");
+        document.write(oldestPerson.age + "<br>");
+        document.write(oldestPerson.city + "<br>");
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+        // var word = "something";
+        // var pal = true;
+
+        // for (var i = 0; i < word.length * 0.5; i++) {
+        // // for (var i = word.length - 1; i >= 0; i--) { 
+
+        //     var mirrorPos = word.length - 1 - i;
+
+        //     document.write(word[mirrorPos]);
+        //     document.write("<br>");
+
+        //     if (word[i] != word[mirrorPos]) {
+        //         pal = false;
+        //         break;
+        //     }
+        // }
+
+        function isPalindromeOptionA(word) {
+            for (var i = 0; i < word.length * 0.5; i++) {
+                var mirrorPos = word.length - 1 - i;
+
+                if (word[i] != word[mirrorPos]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function isPalindromeOptionB(word) {
+            return word == reverseString(word);
+        }
+
+        function reverseString(word) {
+            var newWord = "";
+            for (var i = word.length - 1; i >= 0; i--) {
+                newWord += word[i];
+            }
+            return newWord;
+        }
+
+        var userWord = prompt("What's the word?");
+        
+        if (isPalindromeOptionB(userWord)) {
+            document.write("That is a palindrome indeed!");
+        } else {
+            document.write("Nope 😛");
+        }
+        
+    </script>
+  </body>
+</html>

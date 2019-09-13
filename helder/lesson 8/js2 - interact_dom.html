@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #paragraph1 {
+            color: red
+        }
+
+        #button1 {
+            color: pink;
+            background-color: aqua;
+            border: solid 2px green;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header1">Some text</h1>
+    <p id="paragraph1">some content</p>
+    <p>some more content</p>
+
+    <button id="button1">Click me!</button>
+
+    <script>
+        let header1 = document.getElementById("header1");
+
+        header1.style.color = "green";
+        header1.innerHTML = "Now the text is something else...";
+    
+    </script>
+</body>
+</html>

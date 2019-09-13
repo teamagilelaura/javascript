@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=“UTF-8”>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // O O P
+    // Object Oriented Programming Paradigm
+    class Circle {
+      constructor(radius) {
+        this.radius = radius;
+      }
+      circumference() {
+        return 2 * Math.PI * this.radius;
+      }
+      area() {
+        return 2 * Math.PI * Math.pow(radius, 2);
+      }
+
+    }
+    let circles = [
+      new Circle(10),
+      new Circle(2),
+      new Circle(12)
+    ];
+
+    for (let i = 0; i < circles.length; i++) {
+      document.write(circles[i].circumference());
+      document.write("<br>");
+    }
+  </script>
+</body>
+
+</html>

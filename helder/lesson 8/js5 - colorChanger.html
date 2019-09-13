@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #myBox {
+            width: 200px;
+            height: 200px;
+            
+        }
+
+        button {
+            color: darkgray;
+            background-color: lightgray;
+            border: solid 2px darkgray;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myBox"></div>
+
+    <button id="buttonChangeColor"> ChangeColor </button>
+
+    <script>
+
+        let myBox = document.getElementById("myBox");
+        myBox.style.backgroundColor = "red";
+
+        if (myBox.style.backgroundColor == "red") {
+            alert("HEY it's red");
+        } else {
+            alert("HEY it's some other color");
+        }
+    </script>
+</body>
+</html>
