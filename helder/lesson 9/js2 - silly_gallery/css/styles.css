@@ -1,0 +1,16 @@
+#myBox {
+    width: 200px;
+    height: 200px;
+    background-color: red;  
+    background-image: url(images/simpson1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button {
+    color: darkgray;
+    background-color: lightgray;
+    border: solid 2px darkgray;
+    border-radius: 10px;
+}

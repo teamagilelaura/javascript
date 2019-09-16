@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+    <script src="js/functions.js"></script>
+</head>
+<body>
+    <div id="myBox">
+        
+    </div>
+
+    <button id="buttonPrevColor"> Previous Color </button>
+    <button id="buttonNextColor"> Next Color </button>
+
+    <script>
+        let counter = 0;
+        let arrayOfSimpsons = [
+            "images/simpson1.png",
+            "images/simpson2.png",
+            "images/simpson3.jpg",
+            "images/simpson4.jpg"
+        ];
+
+        let myBox = document.getElementById("myBox");
+        
+        updateGallery(counter);
+        
+        let buttonNextColor = document.getElementById("buttonNextColor");
+        buttonNextColor.addEventListener("click", function() {
+            counter++;
+            if (counter == arrayOfSimpsons.length) {
+                counter = 0;
+            }
+            updateGallery(counter);
+        });
+
+        let buttonPrevColor = document.getElementById("buttonPrevColor");
+        buttonPrevColor.addEventListener("click", function() {
+            counter--;
+            if (counter < 0) {
+                counter = arrayOfSimpsons.length - 1;
+            }
+            updateGallery(counter);
+        });
+        
+        
+    </script>
+</body>
+</html>

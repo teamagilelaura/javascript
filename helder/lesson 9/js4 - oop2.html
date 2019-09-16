@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // O O P
+        // Object Oriented Programming Paradigm
+
+        class Rectangle {
+            
+            constructor(sideA, sideB) {
+                this.sideA = sideA;
+                this.sideB = sideB;
+            }
+
+            perimeter() {
+                // let per = this.sideA + this.sideA + this.sideB + this.sideB;
+                // return per;
+                return 2 * (this.sideA + this.sideB);
+            }
+
+            area () {
+                return this.sideA * this.sideB;
+            }
+        }
+
+        class Circle {
+            constructor (radius) {
+                this.radius = radius;
+            }
+
+            perimeter() {
+                return 2 * Math.PI * this.radius;
+            }
+
+            area() {
+                return Math.PI * this.radius * this.radius;
+            }
+        }
+
+        let rects = [
+            new Rectangle(10, 10),
+            new Rectangle(2, 4),
+            new Rectangle(12, 15)
+        ];
+
+        let circles = [
+            new Circle(10),
+            new Circle(2),
+            new Circle(5),
+            new Circle(12),
+            new Circle(30)
+        ];
+
+        for (let i = 0; i < rects.length; i++) {
+            document.write(rects[i].perimeter());
+            document.write("<br>");
+        }
+
+        for (let i = 0; i < circles.length; i++) {
+            document.write(circles[i].perimeter());
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

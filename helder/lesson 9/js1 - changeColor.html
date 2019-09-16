@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #myBox {
+            width: 200px;
+            height: 200px;
+            background-color: red;  
+        }
+
+        button {
+            color: darkgray;
+            background-color: lightgray;
+            border: solid 2px darkgray;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myBox"></div>
+
+    <button id="buttonPrevColor"> Previous Color </button>
+    <button id="buttonNextColor"> Next Color </button>
+
+    <script>
+        let counter = 0;
+        let arrayOfColors = [
+            "red",
+            "green",
+            "blue",
+            "yellow",
+            "pink",
+            "purple",
+            "black"
+        ];
+
+        let myBox = document.getElementById("myBox");
+        myBox.innerHTML = counter;
+
+        let buttonNextColor = document.getElementById("buttonNextColor");
+        buttonNextColor.addEventListener("click", function() {
+            counter++;
+            if (counter == arrayOfColors.length) {
+                counter = 0;
+            }
+            myBox.innerHTML = counter;
+            myBox.style.backgroundColor = arrayOfColors[counter];
+        });
+
+        let buttonPrevColor = document.getElementById("buttonPrevColor");
+        buttonPrevColor.addEventListener("click", function() {
+            counter--;
+            if (counter < 0) {
+                counter = arrayOfColors.length - 1;
+            }
+            myBox.innerHTML = counter;
+            myBox.style.backgroundColor = arrayOfColors[counter];
+        });
+        
+        
+    </script>
+</body>
+</html>

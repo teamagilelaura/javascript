@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // O O P
+        // Object Oriented Programming Paradigm
+
+        class Car {
+            constructor(make, model, year, color, licensePlate) {
+                this.name = make;
+                this.age = model;
+                this.city = year;
+                this.color = color;
+                this.licensePlate = licensePlate;
+            }
+        }
+
+        class Person {
+            constructor(name, age, city) {
+                this.name = name;
+                this.age = age;
+                this.city = city;
+            }
+        }
+
+        let p1 = new Person("Helder", 38, "Porto");
+        let p2 = new Person("Joe", 18, "NYC");
+        let p3 = new Person("Martha", 40, "London");
+
+
+        let cars = [
+            new Car("Mini", "Cooper", 2000, "blue", "HH-1029a"),
+            new Car("Mini", "Cooper", 2000, "blue", "HH-2000B"),
+            new Car("BMW", "i3", 2018, "White", "HH-10022")
+        ];
+        
+        document.write(p2.name);
+        document.write("<br>");
+        document.write(cars[1].licensePlate);
+    </script>
+</body>
+</html>

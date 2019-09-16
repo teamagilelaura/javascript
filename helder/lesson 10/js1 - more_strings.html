@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // STRINGS ARE IMMUTABLE
+
+        // let text1 = "hello"; // "hello" # 123
+        // text1 += " and goodbye"; // " and goodbye" #456
+        // // "hello and goodbye" #888
+
+        // text1 = text1.toUpperCase(); // "HELLO AND GOODBYE" # 999
+
+        // document.write(text1);
+
+
+        let name = "Clemens";
+
+        let leetName = replaceStringAtPos(name, 2, "3");
+
+        document.write(leetName);
+
+        function replaceStringAtPos(text, pos, replaceCharacter) {
+            let firstHalf = text.substr(0, pos);
+            let secondHalf = text.substr(pos + 1, text.length - pos);
+
+            return firstHalf + replaceCharacter + secondHalf;
+        }
+        
+    </script>
+</body>
+</html>

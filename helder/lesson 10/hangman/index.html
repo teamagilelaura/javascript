@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="hangman.js"></script>
+</head>
+
+<body>
+
+    <h3 id="livesBox">Lives: 6</h3>
+    <h2 id="phraseBox">test</h2>
+    <div id="buttonBox">
+        
+    </div>
+
+    
+
+
+
+
+    <!-- <button id="exBTN">example</button> -->
+
+    <script>
+        
+        // let exBTN = document.getElementById("exBTN");
+        // exBTN.addEventListener("click", function() {
+        //     this.style.backgroundColor = "pink";
+        // });
+
+        let buttonBox = document.getElementById("buttonBox");
+
+        let abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        for (let i = 0; i < abc.length; i++) {
+
+            let button = "<button>" + abc[i] + "</button>";
+            buttonBox.innerHTML += button;
+        }
+
+        let buttons = document.querySelectorAll("#buttonBox > button");
+        for (let i = 0; i < buttons.length; i++) {
+            let button = buttons[i];
+            button.addEventListener("click", function() {
+                alert(this.innerHTML);
+            });
+        }
+
+
+
+
+        // 1 - show the gamePhrase on the screen
+        // 2 - show the lives on the screen
+        // 3 - update game phrase and lives as the user clicks the buttons
+        // 4 - tell the user when he wins or loses
+        // 5 - update the Hangman class so it takes new words in the constructor
+        // 6 - whatever else you think of...
+    </script>
+
+</body>
+
+</html>

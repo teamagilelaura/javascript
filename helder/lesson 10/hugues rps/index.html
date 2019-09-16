@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="rps.js"></script>
+</head>
+
+<body>
+
+  <h1 id="rpsResult">Click to play!</h1>
+  <button id="rockButton">Rock</button>
+  <button id="paperButton">Paper</button>
+  <button id="scissorsButton">Scissors</button>
+
+  <script>
+    let rpsResult = document.getElementById('rpsResult');
+    let rockButton = document.getElementById('rockButton');
+    let paperButton = document.getElementById('paperButton');
+    let scissorsButton = document.getElementById('scissorsButton');
+
+    rockButton.addEventListener("click", function() {
+      let choice_user = 0;
+      rpsResult.innerHTML = new RPS(choice_user).compare();
+    });
+    paperButton.addEventListener("click", function() {
+      let choice_user = 1;
+      rpsResult.innerHTML = new RPS(choice_user).compare();
+    });
+    scissorsButton.addEventListener("click", function() {
+      let choice_user = 2;
+      rpsResult.innerHTML = new RPS(choice_user).compare();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/EuroMillions.js"></script>
+</head>
+<body>
+
+    <h1 id="emBox">Click Below!</h1>
+    <button id="emButton"> new EuroMillions</button>
+
+    <script>
+        let emBox = document.getElementById("emBox");
+        let emButton = document.getElementById("emButton");
+
+        emButton.addEventListener("click", function() {
+            let em = new EuroMillions();
+            emBox.innerHTML = em.showKey();
+        });
+        
+    </script>
+</body>
+</html>
